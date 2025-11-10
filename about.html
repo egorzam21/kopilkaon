@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Детальная информация о проекте Копилка - автоматизированная система с кэшбэком и автоматическим инвестированием">
+    <title>О проекте - Копилка</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Аналитика (такой же код как в index.html) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H74L9CXCMZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H74L9CXCMZ');
+    </script>
+    
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105203779', 'ym');
+        ym(105203779, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105203779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <script src="https://t.contentsquare.net/uxa/889a252b62707.js"></script>
+    <script src="//code.jivo.ru/widget/F9o46kG0AT" async></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" data-event="logo_click">
+                <div class="logo-icon">К</div>
+                <div class="logo-text">Копилка</div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn" data-event="mobile_menu_toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link" data-event="nav_home">Главная</a></li>
+                    <li><a href="about.html" class="nav-link active" data-event="nav_about">О проекте</a></li>
+                    <li><a href="files.html" class="nav-link" data-event="nav_files">Файлы</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons" id="auth-buttons">
+                <button class="btn btn-outline" id="login-btn" data-event="login_click">Войти</button>
+                <button class="btn btn-primary" id="register-btn" data-event="register_click">Регистрация</button>
+            </div>
+            
+            <div class="user-info" id="user-info" style="display: none;">
+                <div class="user-avatar" id="user-avatar">И</div>
+                <span id="user-name">Иван</span>
+                <button class="btn btn-outline" id="logout-btn" data-event="logout_click">Выйти</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs container">
+        <a href="index.html">Главная</a> <span>></span> <span>О проекте</span>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="project-details">
+                <h2 class="section-title">Детальная информация о проекте</h2>
+                
+                <div class="detail-section">
+                    <h3>Общие сведения о системе</h3>
+                    <div class="detail-grid">
+                        <div class="detail-card">
+                            <h4>Наименование</h4>
+                            <p>Автоматизированная система «Копилка» с кэшбэком и автоматическим инвестированием</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Условное обозначение</h4>
+                            <p>АС «Копилка»</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Шифр темы</h4>
+                            <p>НБИбд-01-23</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Заказчик</h4>
+                            <p>АО «Капитал»</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Разработчик</h4>
+                            <p>ИП Замула Е.С.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Сроки выполнения</h4>
+                            <p>Сентябрь – декабрь 2025 года</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Остальные секции (такие же как в оригинале) -->
+                <div class="detail-section">
+                    <h3>Цели и назначение системы</h3>
+                    <div class="detail-grid">
+                        <div class="detail-card">
+                            <h4>Основная цель</h4>
+                            <p>Разработка автоматизированной системы, обеспечивающей привычку регулярных инвестиций у пользователей</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Ключевые показатели</h4>
+                            <ul>
+                                <li>Минимизация усилий пользователя для сбережений</li>
+                                <li>Доступность даже при низких доходах</li>
+                                <li>Повышение финансовой грамотности населения</li>
+                                <li>Рост вовлеченности через геймификацию</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Добавьте остальные секции из оригинального кода -->
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">К</div>
+                <div class="logo-text">Копилка</div>
+            </div>
+            <p>Сервис автоматических накоплений и инвестиций</p>
+            <div class="footer-links">
+                <a href="about.html" data-event="footer_about">О нас</a>
+                <a href="#" data-event="footer_contacts">Контакты</a>
+                <a href="#" data-event="footer_privacy">Политика конфиденциальности</a>
+            </div>
+            <p>&copy; 2025 Копилка. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Auth Modals (такие же как в index.html) -->
+    <div id="login-modal" class="modal">
+        <!-- Содержимое модального окна входа -->
+    </div>
+
+    <div id="register-modal" class="modal">
+        <!-- Содержимое модального окна регистрации -->
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
