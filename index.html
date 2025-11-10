@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сервис «Копилка» помогает формировать привычку регулярных инвестиций с помощью автоматического округления трат, кэшбэка и умных инвестиций.">
     <title>Копилка - Инвестиции для всех</title>
+    
+    <!-- Предзагрузка критичных ресурсов -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H74L9CXCMZ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-H74L9CXCMZ');
     </script>
+    
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
@@ -21,13 +28,15 @@
             for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
         })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105203779', 'ym');
-    
+
         ym(105203779, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/105203779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    
     <script src="https://t.contentsquare.net/uxa/889a252b62707.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="//code.jivo.ru/widget/F9o46kG0AT" async></script>
+    
     <style>
         :root {
             --primary-color: #1b5e20;
@@ -80,6 +89,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            text-decoration: none;
         }
         
         .logo-icon {
@@ -476,6 +486,32 @@
             margin-bottom: 20px;
         }
         
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 15px 0;
+            background-color: var(--light-bg);
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumbs a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .breadcrumbs span {
+            color: var(--text-color);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             .header-container {
@@ -495,36 +531,71 @@
             .hero p {
                 font-size: 1rem;
             }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 15px;
+            }
+            
+            .auth-buttons {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
-    <script src="//code.jivo.ru/widget/F9o46kG0AT" async></script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <div class="logo">
+            <a href="/" class="logo" data-event="logo_click">
                 <div class="logo-icon">К</div>
                 <div class="logo-text">Копилка</div>
-            </div>
-            <nav>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn" data-event="mobile_menu_toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="main-nav">
                 <ul>
-                    <li><a href="#" class="nav-link active" data-page="home">Главная</a></li>
-                    <li><a href="#" class="nav-link protected" data-page="details">О проекте</a></li>
-                    <li><a href="#" class="nav-link protected" data-page="files">Файлы</a></li>
+                    <li><a href="/" class="nav-link active" data-page="home" data-event="nav_home">Главная</a></li>
+                    <li><a href="/about" class="nav-link protected" data-page="details" data-event="nav_about">О проекте</a></li>
+                    <li><a href="/files" class="nav-link protected" data-page="files" data-event="nav_files">Файлы</a></li>
                 </ul>
             </nav>
+            
             <div class="auth-buttons" id="auth-buttons">
-                <button class="btn btn-outline" id="login-btn">Войти</button>
-                <button class="btn btn-primary" id="register-btn">Регистрация</button>
+                <button class="btn btn-outline" id="login-btn" data-event="login_click">Войти</button>
+                <button class="btn btn-primary" id="register-btn" data-event="register_click">Регистрация</button>
             </div>
+            
             <div class="user-info" id="user-info" style="display: none;">
                 <div class="user-avatar" id="user-avatar">И</div>
                 <span id="user-name">Иван</span>
-                <button class="btn btn-outline" id="logout-btn">Выйти</button>
+                <button class="btn btn-outline" id="logout-btn" data-event="logout_click">Выйти</button>
             </div>
         </div>
     </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs container" id="breadcrumbs">
+        <a href="/">Главная</a>
+    </div>
 
     <!-- Main Content -->
     <main>
@@ -535,7 +606,7 @@
                 <div class="container">
                     <h1>Инвестиции для всех</h1>
                     <p>Сервис «Копилка» помогает формировать привычку регулярных инвестиций даже при небольших доходах с помощью автоматического округления трат, кэшбэка и умных инвестиций.</p>
-                    <button class="btn btn-primary" id="hero-register-btn">Начать копить</button>
+                    <button class="btn btn-primary" id="hero-register-btn" data-event="hero_register_click">Начать копить</button>
                     
                     <!-- Код виджета amoCRM -->
                     <div style="margin-top: 20px;">
@@ -552,6 +623,7 @@
                         <h2>О проекте "Копилка"</h2>
                         <p>Автоматизированная система «Копилка» с кэшбэком и автоматическим инвестированием — это инновационный финансовый сервис, разработанный для формирования привычки регулярных инвестиций у пользователей.</p>
                         <p>Наша цель — сделать инвестиции доступными даже при небольших доходах, минимизировать усилия пользователя для сбережений и повысить финансовую грамотность населения через геймификацию и удобный интерфейс.</p>
+                        <a href="/about" class="btn btn-outline" data-event="learn_more_click">Узнать больше</a>
                     </div>
                 </div>
             </section>
@@ -585,22 +657,22 @@
                 <div class="container">
                     <h2 class="section-title">Как работает Копилка</h2>
                     <div class="features-grid">
-                        <div class="feature-card">
+                        <div class="feature-card" data-event="feature_click" data-feature="rounding">
                             <div class="feature-icon"><i class="fas fa-piggy-bank"></i></div>
                             <h3>Автоматическое округление</h3>
                             <p>Привяжите карты, и Копилка будет автоматически округлять ваши траты, переводя разницу в накопления.</p>
                         </div>
-                        <div class="feature-card">
+                        <div class="feature-card" data-event="feature_click" data-feature="investing">
                             <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
                             <h3>Умные инвестиции</h3>
                             <p>Автоматическое инвестирование накопленных средств в готовые портфели, подобранные под ваш профиль риска.</p>
                         </div>
-                        <div class="feature-card">
+                        <div class="feature-card" data-event="feature_click" data-feature="cashback">
                             <div class="feature-icon"><i class="fas fa-gift"></i></div>
                             <h3>Кэшбэк-бонусы</h3>
                             <p>Получайте дополнительный кэшбэк от партнеров, который автоматически направляется в вашу копилку.</p>
                         </div>
-                        <div class="feature-card">
+                        <div class="feature-card" data-event="feature_click" data-feature="gamification">
                             <div class="feature-icon"><i class="fas fa-trophy"></i></div>
                             <h3>Геймификация</h3>
                             <p>Ставьте финансовые цели, отслеживайте прогресс и получайте бонусы за регулярные накопления.</p>
@@ -754,7 +826,7 @@
                     <i class="fas fa-lock"></i>
                     <h3>Доступ ограничен</h3>
                     <p>Для просмотра детальной информации о проекте необходимо войти в систему или зарегистрироваться.</p>
-                    <button class="btn btn-primary" id="details-login-btn">Войти</button>
+                    <button class="btn btn-primary" id="details-login-btn" data-event="protected_login_click">Войти</button>
                 </div>
             </div>
         </section>
@@ -769,85 +841,85 @@
                         <p style="text-align: center; margin-bottom: 30px;">Здесь вы можете скачать все документы и диаграммы проекта</p>
                         
                         <div class="files-grid">
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="business_plan">
                                 <div class="file-icon"><i class="fas fa-file-word"></i></div>
                                 <h3>Бизнес-план</h3>
                                 <p>Инвест-копилка</p>
                                 <a href="Инвест-копилка НБИбд-01-23 Замула.docx" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="technical_spec">
                                 <div class="file-icon"><i class="fas fa-file-pdf"></i></div>
                                 <h3>Техническое задание</h3>
                                 <p>ТЗ</p>
                                 <a href="ТЗ_Замула_НБИбд01_23.docx" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="timeline_diagram">
                                 <div class="file-icon"><i class="fas fa-clock"></i></div>
                                 <h3>Временная диаграмма</h3>
                                 <p>Временная диаграмма</p>
                                 <a href="Временная диаграмма_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="usecase_diagram">
                                 <div class="file-icon"><i class="fas fa-users"></i></div>
                                 <h3>Диаграмма USE Case</h3>
                                 <p>Диаграмма USE Case</p>
                                 <a href="Диаграмма USE Case_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="activity_diagram">
                                 <div class="file-icon"><i class="fas fa-tasks"></i></div>
                                 <h3>Диаграмма деятельности</h3>
                                 <p>Диаграмма деятельности</p>
                                 <a href="Диаграмма деятельности_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="class_diagram">
                                 <div class="file-icon"><i class="fas fa-project-diagram"></i></div>
                                 <h3>Диаграмма классов</h3>
                                 <p>Диаграмма классов</p>
                                 <a href="Диаграмма классов_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="communication_diagram">
                                 <div class="file-icon"><i class="fas fa-comments"></i></div>
                                 <h3>Диаграмма коммуникаций</h3>
                                 <p>Диаграмма коммуникаций</p>
                                 <a href="Диаграмма коммуникаций_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="component_diagram">
                                 <div class="file-icon"><i class="fas fa-puzzle-piece"></i></div>
                                 <h3>Диаграмма компонентов</h3>
                                 <p>Диаграмма компонентов</p>
                                 <a href="Диаграмма компонентов_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="object_diagram">
                                 <div class="file-icon"><i class="fas fa-cube"></i></div>
                                 <h3>Диаграмма объектов</h3>
                                 <p>Диаграмма объектов</p>
                                 <a href="Диаграмма объектов_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="package_diagram">
                                 <div class="file-icon"><i class="fas fa-boxes"></i></div>
                                 <h3>Диаграмма пакетов</h3>
                                 <p>Диаграмма пакетов</p>
                                 <a href="Диаграмма пакетов_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="deployment_diagram">
                                 <div class="file-icon"><i class="fas fa-server"></i></div>
                                 <h3>Диаграмма развертывания</h3>
                                 <p>Диаграмма развертывания</p>
                                 <a href="Диаграмма развертывания_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="state_diagram">
                                 <div class="file-icon"><i class="fas fa-exchange-alt"></i></div>
                                 <h3>Диаграмма состояний</h3>
                                 <p>Диаграмма состояний</p>
                                 <a href="Диаграмма состояний_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="composite_diagram">
                                 <div class="file-icon"><i class="fas fa-sitemap"></i></div>
                                 <h3>Диаграмма композитной структуры</h3>
                                 <p>Диаграмма_композитной_структуры</p>
                                 <a href="Диаграмма_композитной_структуры_Замула.png" class="download-btn" download>Скачать</a>
                             </div>
-                            <div class="file-card">
+                            <div class="file-card" data-event="file_download" data-file="sequence_diagram">
                                 <div class="file-icon"><i class="fas fa-stream"></i></div>
                                 <h3>Диаграмма последовательностей</h3>
                                 <p>Диаграмма_последовательностей</p>
@@ -862,7 +934,7 @@
                     <i class="fas fa-lock"></i>
                     <h3>Доступ ограничен</h3>
                     <p>Для доступа к файлам проекта необходимо войти в систему или зарегистрироваться.</p>
-                    <button class="btn btn-primary" id="files-login-btn">Войти</button>
+                    <button class="btn btn-primary" id="files-login-btn" data-event="protected_files_login_click">Войти</button>
                 </div>
             </div>
         </section>
@@ -877,9 +949,9 @@
             </div>
             <p>Сервис автоматических накоплений и инвестиций</p>
             <div class="footer-links">
-                <a href="#">О нас</a>
-                <a href="#">Контакты</a>
-                <a href="#">Политика конфиденциальности</a>
+                <a href="/about" data-event="footer_about">О нас</a>
+                <a href="#" data-event="footer_contacts">Контакты</a>
+                <a href="#" data-event="footer_privacy">Политика конфиденциальности</a>
             </div>
             <p>&copy; 2025 Копилка. Все права защищены.</p>
         </div>
@@ -901,10 +973,10 @@
                     <label for="login-password">Пароль</label>
                     <input type="password" id="login-password" required>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Войти</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%;" data-event="login_submit">Войти</button>
             </form>
             <div class="form-footer">
-                <p>Нет аккаунта? <a href="#" id="show-register">Зарегистрироваться</a></p>
+                <p>Нет аккаунта? <a href="#" id="show-register" data-event="show_register">Зарегистрироваться</a></p>
             </div>
         </div>
     </div>
@@ -928,10 +1000,10 @@
                     <label for="register-password">Пароль</label>
                     <input type="password" id="register-password" required>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Зарегистрироваться</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%;" data-event="register_submit">Зарегистрироваться</button>
             </form>
             <div class="form-footer">
-                <p>Уже есть аккаунт? <a href="#" id="show-login">Войти</a></p>
+                <p>Уже есть аккаунт? <a href="#" id="show-login" data-event="show_login">Войти</a></p>
             </div>
         </div>
     </div>
@@ -957,10 +1029,77 @@
         const userAvatar = document.getElementById('user-avatar');
         const detailsLoginBtn = document.getElementById('details-login-btn');
         const filesLoginBtn = document.getElementById('files-login-btn');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mainNav = document.getElementById('main-nav');
+        const breadcrumbs = document.getElementById('breadcrumbs');
 
         // Переменные состояния
         let isAuthenticated = false;
         let currentUser = null;
+
+        // Функции для работы с URL
+        function updateURL(path) {
+            const title = getPageTitle(path);
+            const url = path === '/' ? window.location.origin : window.location.origin + path;
+            
+            history.pushState({path: path}, title, url);
+            document.title = title;
+            updateBreadcrumbs(path);
+        }
+
+        function getPageTitle(path) {
+            const titles = {
+                '/': 'Копилка - Инвестиции для всех',
+                '/about': 'О проекте - Копилка',
+                '/files': 'Файлы проекта - Копилка'
+            };
+            return titles[path] || 'Копилка';
+        }
+
+        function updateBreadcrumbs(path) {
+            let breadcrumbHTML = '<a href="/">Главная</a>';
+            
+            if (path === '/about') {
+                breadcrumbHTML += ' <span>></span> <span>О проекте</span>';
+            } else if (path === '/files') {
+                breadcrumbHTML += ' <span>></span> <span>Файлы проекта</span>';
+            }
+            
+            breadcrumbs.innerHTML = breadcrumbHTML;
+        }
+
+        // Функция для отслеживания событий аналитики
+        function trackEvent(eventName, eventData = {}) {
+            // Отправка в Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, eventData);
+            }
+            
+            // Отправка в Яндекс.Метрику
+            if (typeof ym !== 'undefined') {
+                ym(105203779, 'reachGoal', eventName, eventData);
+            }
+            
+            console.log('Event tracked:', eventName, eventData);
+        }
+
+        // Обработчик кликов для data-event атрибутов
+        document.addEventListener('click', function(e) {
+            const target = e.target.closest('[data-event]');
+            if (target) {
+                const eventName = target.getAttribute('data-event');
+                const eventData = {};
+                
+                // Собираем дополнительные данные из data-атрибутов
+                for (let attr of target.attributes) {
+                    if (attr.name.startsWith('data-') && attr.name !== 'data-event') {
+                        eventData[attr.name.replace('data-', '')] = attr.value;
+                    }
+                }
+                
+                trackEvent(eventName, eventData);
+            }
+        });
 
         // Функции для работы с модальными окнами
         function openModal(modal) {
@@ -1048,6 +1187,7 @@
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const pageId = link.getAttribute('data-page') + '-page';
+                const path = link.getAttribute('href');
                 
                 // Проверка доступа к защищенным страницам
                 if (link.classList.contains('protected') && !isAuthenticated) {
@@ -1067,9 +1207,71 @@
                 });
                 document.getElementById(pageId).classList.add('active');
                 
+                // Обновить URL
+                updateURL(path);
+                
                 // Прокрутка к верху страницы
                 window.scrollTo(0, 0);
+                
+                // Закрыть мобильное меню, если открыто
+                mainNav.classList.remove('active');
             });
+        });
+
+        // Обработка навигации через кнопку "Узнать больше"
+        document.querySelector('[data-event="learn_more_click"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('[data-page="details"]').click();
+        });
+
+        // Обработка навигации через логотип
+        document.querySelector('.logo').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('[data-page="home"]').click();
+        });
+
+        // Мобильное меню
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+
+        // Обработка навигации браузера (кнопки назад/вперед)
+        window.addEventListener('popstate', function(e) {
+            if (e.state && e.state.path) {
+                const path = e.state.path;
+                let pageId = 'home-page';
+                
+                if (path === '/about') pageId = 'details-page';
+                if (path === '/files') pageId = 'files-page';
+                
+                // Проверка доступа к защищенным страницам
+                if ((pageId === 'details-page' || pageId === 'files-page') && !isAuthenticated) {
+                    history.replaceState({path: '/'}, 'Копилка - Инвестиции для всех', '/');
+                    document.querySelector('[data-page="home"]').click();
+                    return;
+                }
+                
+                // Обновить активную ссылку в навигации
+                navLinks.forEach(navLink => {
+                    navLink.classList.remove('active');
+                    if (navLink.getAttribute('href') === path) {
+                        navLink.classList.add('active');
+                    }
+                });
+                
+                // Показать выбранную страницу
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                document.getElementById(pageId).classList.add('active');
+                
+                // Обновить заголовок и хлебные крошки
+                document.title = getPageTitle(path);
+                updateBreadcrumbs(path);
+                
+                // Прокрутка к верху страницы
+                window.scrollTo(0, 0);
+            }
         });
 
         // Обновление интерфейса в зависимости от состояния авторизации
@@ -1109,16 +1311,22 @@
                         navLink.classList.remove('active');
                     });
                     document.querySelector('[data-page="home"]').classList.add('active');
+                    
+                    updateURL('/');
                 }
             }
         }
 
         // Инициализация
         updateUI();
+        
+        // Инициализация URL при загрузке
+        const initialPath = window.location.pathname;
+        if (initialPath !== '/' && initialPath !== '/about' && initialPath !== '/files') {
+            history.replaceState({path: '/'}, 'Копилка - Инвестиции для всех', '/');
+        } else {
+            updateBreadcrumbs(initialPath);
+        }
     </script>
 </body>
 </html>
-
-
-
-
