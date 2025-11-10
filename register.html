@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Копилка — Регистрация</title>
+<meta name="description" content="Регистрация в сервисе Копилка">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/script.js"></script>
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <div class="logo"><div class="logo-icon">К</div><div><strong>Копилка</strong></div></div>
+  </div>
+</header>
+
+<main class="container">
+  <h1 class="section-title">Регистрация</h1>
+  <form id="register-form" class="card" style="max-width:520px;margin:0 auto">
+    <div class="form-row"><label>Имя<input type="text" name="name" required></label></div>
+    <div class="form-row"><label>Email<input type="email" name="email" required></label></div>
+    <div class="form-row"><label>Пароль<input type="password" name="password" required></label></div>
+    <div style="margin-top:12px"><button type="submit" class="btn btn-primary" data-event="submit_register">Зарегистрироваться</button></div>
+  </form>
+  <p style="text-align:center;margin-top:12px">Уже есть аккаунт? <a href="login.html" data-event="open_login">Войти</a></p>
+</main>
+
+<footer>
+  <div class="container">© 2025 Копилка</div>
+</footer>
+</body>
+</html>

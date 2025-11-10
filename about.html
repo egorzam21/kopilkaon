@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Копилка — О проекте</title>
+<meta name="description" content="Детальная информация о проекте Копилка">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/script.js"></script>
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <div class="logo"><div class="logo-icon">К</div><div><strong>Копилка</strong></div></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О проекте</a></li>
+        <li><a href="files.html">Файлы</a></li>
+      </ul>
+    </nav>
+    <div>
+      <span id="auth-buttons">
+        <a class="btn btn-outline" href="login.html?back=about.html" data-event="click_open_login">Войти</a>
+        <a class="btn btn-primary" href="register.html?back=about.html" data-event="click_open_register" data-utmappend="true">Регистрация</a>
+      </span>
+      <span id="user-info" class="hidden"><span id="user-name"></span> <button class="btn btn-outline" id="logout-btn">Выйти</button></span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <h1 class="section-title">Детальная информация о проекте</h1>
+
+  <div data-protected="true">
+    <!-- If not authenticated, JS will replace this block with protected message -->
+    <div class="card">
+      <h3>Общие сведения о системе</h3>
+      <p>Автоматизированная система «Копилка» с кэшбэком и автоматическим инвестированием.</p>
+      <h4>Разработчик</h4><p>ИП Замула Е.С.</p>
+      <h4>Сроки</h4><p>Сентябрь – декабрь 2025</p>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <h3>Требования</h3>
+      <ul>
+        <li>Регистрация и авторизация</li>
+        <li>Привязка карт</li>
+        <li>Автоинвестирование</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div>© 2025 Копилка</div>
+  </div>
+</footer>
+</body>
+</html>
