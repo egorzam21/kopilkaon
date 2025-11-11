@@ -156,58 +156,128 @@
 }
 
 /* CTA секция */
+/* CTA секция */
 .cta-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   padding: 60px 40px;
   border-radius: 15px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .cta-content h2 {
   color: white;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
 }
 
 .cta-content p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
   opacity: 0.9;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-/* Адаптивность */
+.cta-buttons .btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+  background: #fff;
+  color: #667eea;
+  border: 2px solid #fff;
+}
+
+.cta-buttons .btn-primary:hover {
+  background: transparent;
+  color: #fff;
+}
+
+.cta-buttons .btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.cta-buttons .btn-outline:hover {
+  background: #fff;
+  color: #667eea;
+}
+
+/* Адаптивность для CTA */
 @media (max-width: 768px) {
-  .timeline::before {
-    left: 20px;
+  .cta-section {
+    padding: 40px 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
   
-  .timeline-date {
-    width: 80px;
-    font-size: 0.9rem;
+  .cta-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
   }
   
-  .features-grid,
-  .business-model-grid,
-  .tech-grid {
-    grid-template-columns: 1fr;
+  .cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
   }
   
   .cta-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
   
-  .cta-section {
-    padding: 40px 20px;
+  .cta-buttons .btn {
+    width: 200px;
+    text-align: center;
   }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 30px 15px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .cta-content p {
+    font-size: 1rem;
+  }
+}
+/* Увеличим отступы между секциями */
+.about-content section {
+  margin-bottom: 80px;
+  padding: 0 10px;
+}
+
+.technology-section {
+  margin-bottom: 40px !important;
+}
+
+/* Убедимся, что контейнер имеет достаточные отступы */
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 :root{
   --primary-color:#1b5e20;
