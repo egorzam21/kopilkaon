@@ -17,6 +17,7 @@
         <li><a href="index.html">Главная</a></li>
         <li><a href="about.html">О проекте</a></li>
         <li><a href="files.html" class="active">Файлы</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
       </ul>
     </nav>
     <div>
@@ -33,6 +34,20 @@
   <div class="page-header">
     <h1 class="section-title">Документы и файлы проекта</h1>
     <p class="page-subtitle">Все материалы для ознакомления с проектом Копилка</p>
+    <div class="files-stats">
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Документа</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">12</span>
+        <span class="stat-label">Диаграмм</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">15</span>
+        <span class="stat-label">Всего файлов</span>
+      </div>
+    </div>
   </div>
 
   <div data-protected="true">
@@ -40,62 +55,80 @@
     <!-- Секция документов -->
     <section class="files-section">
       <div class="section-header">
-        <h2 class="subsection-title">📄 Документы</h2>
-        <p class="section-description">Основные документы проекта</p>
+        <div class="section-title-wrapper">
+          <h2 class="subsection-title">📄 Документы проекта</h2>
+          <span class="section-badge">3 файла</span>
+        </div>
+        <p class="section-description">Основные документы и техническая документация проекта</p>
       </div>
-      <div class="files-grid">
+      <div class="files-grid documents-grid">
         <div class="file-card document-card">
-          <div class="file-icon">📊</div>
+          <div class="file-header">
+            <div class="file-icon">📊</div>
+            <div class="file-badge document-badge">DOCX</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Бизнес-план</h3>
-            <p class="file-description">Инвест-копилка - полное бизнес-обоснование проекта</p>
+            <p class="file-description">Инвест-копилка - полное бизнес-обоснование проекта с финансовыми расчетами</p>
             <div class="file-meta">
-              <span class="file-type">DOCX</span>
               <span class="file-size">~2.5 МБ</span>
+              <span class="file-date">Обновлен 2 дня назад</span>
             </div>
           </div>
-          <a class="btn btn-primary btn-download" href="Инвест-копилка НБИбд-01-23 Замула.docx" download data-event="download_business_plan">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-primary btn-download" href="Инвест-копилка НБИбд-01-23 Замула.docx" download data-event="download_business_plan">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
         <div class="file-card document-card">
-          <div class="file-icon">📋</div>
+          <div class="file-header">
+            <div class="file-icon">📋</div>
+            <div class="file-badge document-badge">DOCX</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Техническое задание</h3>
-            <p class="file-description">ТЗ проекта в формате Word</p>
+            <p class="file-description">ТЗ проекта в формате Word с полным описанием функциональных требований</p>
             <div class="file-meta">
-              <span class="file-type">DOCX</span>
               <span class="file-size">~1.8 МБ</span>
+              <span class="file-date">Обновлен 2 дня назад</span>
             </div>
           </div>
-          <a class="btn btn-primary btn-download" href="ТЗ_Замула_НБИбд01_23.docx" download data-event="download_tz_docx">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-primary btn-download" href="ТЗ_Замула_НБИбд01_23.docx" download data-event="download_tz_docx">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
         <div class="file-card document-card">
-          <div class="file-icon">📋</div>
+          <div class="file-header">
+            <div class="file-icon">📋</div>
+            <div class="file-badge pdf-badge">PDF</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Техническое задание</h3>
-            <p class="file-description">ТЗ проекта в формате PDF</p>
+            <p class="file-description">ТЗ проекта в формате PDF для удобного просмотра и печати</p>
             <div class="file-meta">
-              <span class="file-type">PDF</span>
               <span class="file-size">~1.5 МБ</span>
+              <span class="file-date">Обновлен 2 дня назад</span>
             </div>
           </div>
-          <a class="btn btn-primary btn-download" href="ТЗ_Замула_НБИбд01_23.pdf" download data-event="download_tz_pdf">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-primary btn-download" href="ТЗ_Замула_НБИбд01_23.pdf" download data-event="download_tz_pdf">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -103,224 +136,240 @@
     <!-- Секция диаграмм -->
     <section class="files-section">
       <div class="section-header">
-        <h2 class="subsection-title">📐 Диаграммы проекта</h2>
-        <p class="section-description">Визуальные модели и схемы системы</p>
+        <div class="section-title-wrapper">
+          <h2 class="subsection-title">📐 Диаграммы проекта</h2>
+          <span class="section-badge">12 файлов</span>
+        </div>
+        <p class="section-description">Визуальные модели и схемы архитектуры системы</p>
       </div>
-      <div class="files-grid">
-        <!-- Временная диаграмма -->
+      <div class="files-grid diagrams-grid">
+        
         <div class="file-card diagram-card">
-          <div class="file-icon">⏰</div>
+          <div class="file-header">
+            <div class="file-icon">⏰</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Временная диаграмма</h3>
-            <p class="file-description">Диаграмма временных характеристик системы</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Диаграмма временных характеристик системы и процессов</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Временная диаграмма_Замула.png" download data-event="download_timing_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Временная диаграмма_Замула.png" download data-event="download_timing_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- USE Case диаграмма -->
         <div class="file-card diagram-card">
-          <div class="file-icon">👥</div>
+          <div class="file-header">
+            <div class="file-icon">👥</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">USE Case диаграмма</h3>
-            <p class="file-description">Диаграмма прецедентов использования</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Диаграмма прецедентов использования системы</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма USE Case_Замула.png" download data-event="download_usecase_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма USE Case_Замула.png" download data-event="download_usecase_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Диаграмма деятельности -->
         <div class="file-card diagram-card">
-          <div class="file-icon">🔧</div>
+          <div class="file-header">
+            <div class="file-icon">🔧</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Диаграмма деятельности</h3>
-            <p class="file-description">Activity diagram - схема бизнес-процессов</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Activity diagram - схема бизнес-процессов и workflow</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма деятельности_Замула.png" download data-event="download_activity_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма деятельности_Замула.png" download data-event="download_activity_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Диаграмма классов -->
         <div class="file-card diagram-card">
-          <div class="file-icon">🏗️</div>
+          <div class="file-header">
+            <div class="file-icon">🏗️</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Диаграмма классов</h3>
-            <p class="file-description">Class diagram - структура классов системы</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Class diagram - структура классов и их взаимосвязи</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма классов_Замула.png" download data-event="download_class_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма классов_Замула.png" download data-event="download_class_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Диаграмма коммуникаций -->
         <div class="file-card diagram-card">
-          <div class="file-icon">💬</div>
+          <div class="file-header">
+            <div class="file-icon">💬</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Диаграмма коммуникаций</h3>
-            <p class="file-description">Communication diagram - взаимодействие объектов</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Communication diagram - взаимодействие объектов системы</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма коммуникаций_Замула.png" download data-event="download_communication_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма коммуникаций_Замула.png" download data-event="download_communication_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Диаграмма компонентов -->
         <div class="file-card diagram-card">
-          <div class="file-icon">🧩</div>
+          <div class="file-header">
+            <div class="file-icon">🧩</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Диаграмма компонентов</h3>
-            <p class="file-description">Component diagram - архитектура компонентов</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Component diagram - архитектура компонентов системы</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма компонентов_Замула.png" download data-event="download_component_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма компонентов_Замула.png" download data-event="download_component_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Диаграмма объектов -->
         <div class="file-card diagram-card">
-          <div class="file-icon">🔍</div>
+          <div class="file-header">
+            <div class="file-icon">🔍</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Диаграмма объектов</h3>
-            <p class="file-description">Object diagram - экземпляры объектов системы</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Object diagram - экземпляры объектов системы в runtime</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма объектов_Замула.png" download data-event="download_object_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма объектов_Замула.png" download data-event="download_object_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Диаграмма пакетов -->
         <div class="file-card diagram-card">
-          <div class="file-icon">📦</div>
+          <div class="file-header">
+            <div class="file-icon">📦</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Диаграмма пакетов</h3>
-            <p class="file-description">Package diagram - организация пакетов системы</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Package diagram - организация пакетов и модулей системы</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма пакетов_Замула.png" download data-event="download_package_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма пакетов_Замула.png" download data-event="download_package_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Диаграмма развертывания -->
         <div class="file-card diagram-card">
-          <div class="file-icon">🚀</div>
+          <div class="file-header">
+            <div class="file-icon">🚀</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Диаграмма развертывания</h3>
-            <p class="file-description">Deployment diagram - развертывание системы</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Deployment diagram - развертывание системы на серверах</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма развертывания_Замула.png" download data-event="download_deployment_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма развертывания_Замула.png" download data-event="download_deployment_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Диаграмма состояний -->
         <div class="file-card diagram-card">
-          <div class="file-icon">🔄</div>
+          <div class="file-header">
+            <div class="file-icon">🔄</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Диаграмма состояний</h3>
-            <p class="file-description">State machine diagram - состояния объектов</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">State machine diagram - состояния объектов и переходы</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма состояний_Замула.png" download data-event="download_state_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма состояний_Замула.png" download data-event="download_state_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Диаграмма композитной структуры -->
         <div class="file-card diagram-card">
-          <div class="file-icon">🏛️</div>
+          <div class="file-header">
+            <div class="file-icon">🏛️</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Диаграмма композитной структуры</h3>
-            <p class="file-description">Composite structure diagram</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Composite structure diagram - внутренняя структура классов</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма_композитной_структуры_Замула.png" download data-event="download_composite_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма_композитной_структуры_Замула.png" download data-event="download_composite_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Диаграмма последовательностей -->
         <div class="file-card diagram-card">
-          <div class="file-icon">📋</div>
+          <div class="file-header">
+            <div class="file-icon">📋</div>
+            <div class="file-badge png-badge">PNG</div>
+          </div>
           <div class="file-content">
             <h3 class="file-title">Диаграмма последовательностей</h3>
-            <p class="file-description">Sequence diagram - последовательность взаимодействий</p>
-            <div class="file-meta">
-              <span class="file-type">PNG</span>
-            </div>
+            <p class="file-description">Sequence diagram - последовательность взаимодействий объектов</p>
           </div>
-          <a class="btn btn-outline btn-download" href="Диаграмма_последовательностей_Замула.png" download data-event="download_sequence_diagram">
-            <span>Скачать</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-          </a>
+          <div class="file-actions">
+            <a class="btn btn-outline btn-download" href="Диаграмма_последовательностей_Замула.png" download data-event="download_sequence_diagram">
+              <span>Скачать</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -329,7 +378,13 @@
 
 <footer>
   <div class="container">
-    <div>© 2025 Копилка</div>
+    <div class="footer-content">
+      <div>© 2025 Копилка</div>
+      <div class="footer-links">
+        <a href="privacy.html">Конфиденциальность</a>
+        <a href="terms.html">Условия использования</a>
+      </div>
+    </div>
   </div>
 </footer>
 </body>
