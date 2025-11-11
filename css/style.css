@@ -1,4 +1,214 @@
+/* Стили для страницы "О проекте" */
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.about-content section {
+  margin-bottom: 60px;
+}
+
+.about-content h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.about-content h3 {
+  color: #34495e;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+/* Сетка возможностей */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+}
+
+/* Таймлайн */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #3498db;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-date {
+  width: 120px;
+  font-weight: bold;
+  color: #2c3e50;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.timeline-content {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #f8f9fa;
+}
+
+.timeline-content h4 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.timeline-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.timeline-content li {
+  margin-bottom: 5px;
+}
+
+/* Бизнес-модель */
+.business-model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.model-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.model-card h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.model-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* Технологии */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.tech-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.tech-card h3 {
+  margin-bottom: 15px;
+}
+
+.tech-card ul {
+  padding-left: 20px;
+}
+
+.tech-card li {
+  margin-bottom: 8px;
+}
+
+/* CTA секция */
+.cta-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 60px 40px;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta-content h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-date {
+    width: 80px;
+    font-size: 0.9rem;
+  }
+  
+  .features-grid,
+  .business-model-grid,
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-section {
+    padding: 40px 20px;
+  }
+}
 :root{
   --primary-color:#1b5e20;
   --primary-dark:#003300;
