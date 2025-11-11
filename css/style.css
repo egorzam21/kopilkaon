@@ -1,3 +1,195 @@
+/* Стили для страницы файлов */
+.page-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-subtitle {
+  color: #6c757d;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.files-section {
+  margin-bottom: 60px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subsection-title {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.files-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.file-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e9ecef;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.file-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.file-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.file-card:hover::before {
+  width: 6px;
+}
+
+.file-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.file-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-title {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.file-description {
+  color: #6c757d;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.file-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.file-type, .file-size {
+  background: #f8f9fa;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #495057;
+  border: 1px solid #e9ecef;
+}
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.btn-download:hover {
+  transform: translateY(-2px);
+}
+
+/* Специфичные стили для типов карточек */
+.document-card {
+  border-left: 4px solid #28a745;
+}
+
+.document-card::before {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.diagram-card {
+  border-left: 4px solid #007bff;
+}
+
+.diagram-card::before {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+/* Активное состояние навигации */
+nav ul li a.active {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .files-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .file-card {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .file-icon {
+    margin-bottom: 10px;
+  }
+  
+  .file-meta {
+    justify-content: center;
+  }
+  
+  .subsection-title {
+    font-size: 1.6rem;
+  }
+  
+  .page-header {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .file-card {
+    padding: 15px;
+  }
+  
+  .btn-download {
+    width: 100%;
+    justify-content: center;
+  }
+}
 /* Стили для страницы "О проекте" */
 .about-content {
   max-width: 1200px;
