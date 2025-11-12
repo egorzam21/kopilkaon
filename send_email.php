@@ -5,7 +5,7 @@
 $input = json_decode(file_get_contents('php://input'), true);
 
 // Настройки email
-$to = "info@kopilka.ru"; // Замените на нужный email
+$to = "egorzamula3@gmail.com"; // Замените на нужный email
 $subject = "Обратная связь с сайта Копилка: " . $input['topic'];
 $message = "
 Имя: " . $input['name'] . "
