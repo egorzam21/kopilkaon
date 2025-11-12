@@ -99,38 +99,20 @@
         <h2>Обратная связь</h2>
         <p>Заполните форму и мы свяжемся с вами</p>
       </div>
-      <form class="feedback-form" id="feedbackForm">
-        <div class="form-group">
-          <label for="name">Ваше имя</label>
-          <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Электронная почта</label>
-          <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
-        </div>
-        <div class="form-group">
-          <label for="topic">Тема обращения</label>
-          <select id="topic" name="topic" required>
-            <option value="">Выберите тему</option>
-            <option value="general">Общий вопрос</option>
-            <option value="support">Техническая поддержка</option>
-            <option value="partnership">Сотрудничество</option>
-            <option value="feedback">Отзыв о сервисе</option>
-            <option value="other">Другое</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Сообщение</label>
-          <textarea id="message" name="message" placeholder="Опишите ваш вопрос или предложение..." rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-submit">
-          <span>Отправить сообщение</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-          </svg>
-        </button>
-      </form>
-      <div id="formMessage" class="form-message" style="display: none;"></div>
+      
+      <!-- Google Form -->
+      <div class="google-form-container">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSe9h60s0IKof5DLunV5pR_04ZlUrEy7DC_zTk1vUHzZtf5RnA/viewform?embedded=true" 
+          width="100%" 
+          height="500" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0"
+          loading="lazy">
+          Загрузка…
+        </iframe>
+      </div>
     </div>
   </div>
 
@@ -170,112 +152,44 @@
   </div>
 </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const feedbackForm = document.getElementById('feedbackForm');
-  const formMessage = document.getElementById('formMessage');
-  
-  feedbackForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Показываем сообщение о загрузке
-    showMessage('Отправка сообщения...', 'info');
-    
-    // Создаем FormData из формы
-    const formData = new FormData(feedbackForm);
-    
-    // Отправляем данные на сервер
-    fetch('send_email.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(result => {
-      if (result.success) {
-        showMessage('Сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.', 'success');
-        feedbackForm.reset();
-      } else {
-        showMessage('Произошла ошибка при отправке сообщения: ' + (result.error || ''), 'error');
-      }
-    })
-    .catch(error => {
-      console.error('Ошибка:', error);
-      showMessage('Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.', 'error');
-    });
-  });
-  
-  function showMessage(text, type) {
-    formMessage.textContent = text;
-    formMessage.className = 'form-message ' + type;
-    formMessage.style.display = 'block';
-    
-    // Автоматически скрыть сообщение через 5 секунд
-    setTimeout(() => {
-      formMessage.style.display = 'none';
-    }, 5000);
-  }
-});
-</script>
-
 <style>
-.form-message {
+.google-form-container {
+  width: 100%;
   margin-top: 20px;
-  padding: 12px 16px;
-  border-radius: 4px;
-  font-weight: 500;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-message.success {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
+.google-form-container iframe {
+  border: none;
+  min-height: 500px;
 }
 
-.form-message.error {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .google-form-container iframe {
+    height: 600px; /* Увеличиваем высоту на мобильных для удобства */
+  }
 }
 
-.form-message.info {
-  background-color: #d1ecf1;
-  color: #0c5460;
-  border: 1px solid #bee5eb;
+@media (max-width: 480px) {
+  .google-form-container iframe {
+    height: 700px; /* Еще больше на маленьких экранах */
+  }
 }
 
-/* Стили для кнопки при загрузке */
-.btn-submit:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+/* Стили для лучшего отображения формы */
+.feedback-card {
+  padding: 0; /* Убираем padding чтобы форма занимала всю ширину карточки */
 }
 
-.btn-submit.loading {
-  position: relative;
-  color: transparent;
+.feedback-header {
+  padding: 30px 30px 0 30px;
 }
 
-.btn-submit.loading::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  left: 50%;
-  margin-left: -10px;
-  margin-top: -10px;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  border-top-color: transparent;
-  animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
+.google-form-container {
+  border-top: 1px solid #eee;
 }
 </style>
 </body>
