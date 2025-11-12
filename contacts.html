@@ -99,7 +99,7 @@
         <h2>Обратная связь</h2>
         <p>Заполните форму и мы свяжемся с вами</p>
       </div>
-      <form class="feedback-form">
+      <form class="feedback-form" id="feedbackForm">
         <div class="form-group">
           <label for="name">Ваше имя</label>
           <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
@@ -130,6 +130,7 @@
           </svg>
         </button>
       </form>
+      <div id="formMessage" class="form-message" style="display: none;"></div>
     </div>
   </div>
 
@@ -168,5 +169,88 @@
     </div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const feedbackForm = document.getElementById('feedbackForm');
+  const formMessage = document.getElementById('formMessage');
+  
+  feedbackForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Получаем данные формы
+    const formData = new FormData(feedbackForm);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      topic: formData.get('topic'),
+      message: formData.get('message')
+    };
+    
+    // Показываем сообщение о загрузке
+    showMessage('Отправка сообщения...', 'info');
+    
+    // Отправляем данные на сервер
+    fetch('send_email.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+      if (result.success) {
+        showMessage('Сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.', 'success');
+        feedbackForm.reset();
+      } else {
+        showMessage('Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.', 'error');
+      }
+    })
+    .catch(error => {
+      console.error('Ошибка:', error);
+      showMessage('Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.', 'error');
+    });
+  });
+  
+  function showMessage(text, type) {
+    formMessage.textContent = text;
+    formMessage.className = 'form-message ' + type;
+    formMessage.style.display = 'block';
+    
+    // Автоматически скрыть сообщение через 5 секунд
+    setTimeout(() => {
+      formMessage.style.display = 'none';
+    }, 5000);
+  }
+});
+</script>
+
+<style>
+.form-message {
+  margin-top: 20px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.form-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.form-message.info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+</style>
 </body>
 </html>
