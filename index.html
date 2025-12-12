@@ -1,127 +1,212 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Копилка — Инвестиции для всех | Главная</title>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKQGVTHD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KKQGVTHD');</script>
-<!-- End Google Tag Manager -->
-  <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H74L9CXCMZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-H74L9CXCMZ');
-    </script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105203779', 'ym');
-    
-        ym(105203779, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105203779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <script src="https://t.contentsquare.net/uxa/889a252b62707.js"></script>
-<meta name="description" content="Копилка — автоматизированный сервис накоплений и инвестиций. Начните копить и инвестировать регулярно.">
-<link rel="canonical" href="https://kopilka.ru/index.html">
-<link rel="stylesheet" href="css/style.css">
-<script defer src="js/script.js"></script>
-<!-- JSON-LD Organization -->
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Organization", "name": "Копилка", "url": "https://kopilka.ru", "logo": "https://kopilka.ru/img/logo.png", "description": "Сервис автоматических накоплений и инвестиций"}
-</script>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "u521gsun7a");
-</script>
-  <script src="//code.jivo.ru/widget/F9o46kG0AT" async></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>О проекте «Копилка» — Жизненный цикл системы</title>
+    <!-- Google Tag Manager и другие скрипты, как в index.html -->
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
 <header>
-  <div class="container header-inner">
-    <div class="logo"><div class="logo-icon">К</div><div><strong>Копилка</strong></div></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="about.html">О проекте</a></li>
-        <li><a href="files.html">Файлы</a></li>
-      </ul>
-    </nav>
-    <div>
-      <span id="auth-buttons">
-        <a class="btn btn-outline" href="login.html" data-event="click_open_login">Войти</a>
-        <a class="btn btn-primary" href="register.html" data-event="click_open_register" data-utmappend="true">Регистрация</a>
-      </span>
-      <span id="user-info" class="hidden"><span id="user-name"></span> <button class="btn btn-outline" id="logout-btn">Выйти</button></span>
+    <div class="container header-inner">
+        <div class="logo"><div class="logo-icon">К</div><div><strong>Копилка</strong></div></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О проекте</a></li>
+                <li><a href="files.html">Файлы</a></li>
+            </ul>
+        </nav>
+        <div>
+            <span id="auth-buttons">
+                <a class="btn btn-outline" href="login.html">Войти</a>
+                <a class="btn btn-primary" href="register.html">Регистрация</a>
+            </span>
+        </div>
     </div>
-  </div>
 </header>
+
 <main class="container">
-  <section class="hero" aria-labelledby="hero-title">
-    <h1 id="hero-title">Инвестиции для всех</h1>
-    <p>Сервис «Копилка» помогает формировать привычку регулярных инвестиций даже при небольших доходах.</p>
-    <p style="margin-top:12px"><a class="btn btn-primary" href="register.html" data-event="click_hero_register" data-utmappend="true">Начать копить</a></p>
-    <!-- Код виджета amoCRM -->
-                    <div style="margin-top: 20px;">
-                        <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1626930",hash:"636ad20bb197474f33978d47809452e6",locale:"ru"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script>
-                        <script id="amoforms_script_1626930" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1762712266"></script>
-                    </div>
-                </div>
-  </section>
+    <h1>О проекте «Копилка»: Жизненный цикл системы</h1>
 
-  <section class="project-intro">
-    <h2 class="section-title">О проекте "Копилка"</h2>
-    <div class="card">
-      <p>Автоматизированная система с кэшбэком и автоматическим инвестированием — инновационный финансовый сервис.</p>
-      <p>Узнайте больше <a href="about.html">о проекте</a> или скачайте документы в <a href="files.html">разделе Файлы</a>.</p>
-    </div>
-  </section>
+    <!-- 1. Цели, задачи, ЦА, SWOT, 4P -->
+    <section>
+        <h2>1. Основа проекта</h2>
+        <div class="card">
+            <h3>Цели</h3>
+            <p>Сформировать привычку регулярных инвестиций даже при небольших доходах.</p>
 
-  <section class="features">
-    <h2 class="section-title">Как работает</h2>
-    <div class="features-grid">
-      <div class="card"><h3>Автоматическое округление</h3><p>Переводим разницу от покупок в накопления.</p></div>
-      <div class="card"><h3>Умные инвестиции</h3><p>Инвестирование в готовые портфели по профилю риска.</p></div>
-      <div class="card"><h3>Кэшбэк</h3><p>Кэшбэк направляется в ваши накопления.</p></div>
-      <div class="card"><h3>Геймификация</h3><p>Цели и награды за регулярность.</p></div>
-    </div>
-  </section>
+            <h3>Задачи</h3>
+            <ul>
+                <li>Разработать мобильное приложение/сайт, привязанный к картам/банковским счетам.</li>
+                <li>Автоматически округлять траты.</li>
+                <li>Добавить кэшбэк-бонусы.</li>
+                <li>Встроить функцию «умных инвестиций».</li>
+                <li>Реализовать геймификацию (цели, прогресс-бары).</li>
+                <li>Обеспечить прозрачность и безопасность.</li>
+            </ul>
 
-  <section class="stats">
-    <h2 class="section-title">Ключевые показатели</h2>
-    <div class="stat-grid">
-      <div class="stat"><strong>99%</strong><div>Доступность</div></div>
-      <div class="stat"><strong>18-45</strong><div>ЦА</div></div>
-      <div class="stat"><strong>4</strong><div>Модуля</div></div>
-      <div class="stat"><strong>2025</strong><div>Год запуска</div></div>
-    </div>
-  </section>
+            <h3>Целевая аудитория</h3>
+            <p>Физические лица 18–45 лет, преимущественно молодёжь и начинающие инвесторы.</p>
+
+            <h3>4P анализ</h3>
+            <p><strong>Product:</strong> Мобильное приложение + веб-платформа с функциями округления, автоИИ, кэшбэком, геймификацией.</p>
+            <p><strong>Price:</strong> Freemium (базовый функционал бесплатно, подписка 199–499 ₽/мес).</p>
+            <p><strong>Place:</strong> Мобильные приложения (iOS, Android), веб-версия, интеграции с магазинами.</p>
+            <p><strong>Promotion:</strong> TikTok, Instagram, Telegram, партнёрства, реферальная система.</p>
+
+            <h3>SWOT анализ</h3>
+            <p><strong>Сильные:</strong> Простота, геймификация, кэшбэк, для молодёжи.</p>
+            <p><strong>Слабые:</strong> Зависимость от банковских API, низкая маржинальность, недоверие.</p>
+            <p><strong>Возможности:</strong> Рост интереса к микросбережениям, партнёрства, криптовалюты.</p>
+            <p><strong>Угрозы:</strong> Конкуренция с банками, изменения законодательства, киберугрозы.</p>
+        </div>
+    </section>
+
+    <!-- 2. Планирование -->
+    <section>
+        <h2>2. Планирование</h2>
+        <div class="card">
+            <h3>Техническое задание (основные требования)</h3>
+            <ul>
+                <li>Система: АС «Копилка» с кэшбэком и автоИИ.</li>
+                <li>Цель: минимизация усилий пользователя, доступность, финансовая грамотность.</li>
+                <li>Подсистемы: Копилка, Кэшбэк, Инвестиции, Личный кабинет, Поддержка.</li>
+                <li>Технологии: Django/Node.js, Kotlin/Swift, PostgreSQL, Redis.</li>
+                <li>Безопасность: 152-ФЗ, TLS, MFA, RBAC, шифрование, пентесты.</li>
+                <li>Этапы: сентябрь – декабрь 2025 (анализ, прототип, кэшбэк, бета-тест).</li>
+            </ul>
+
+            <h3>UML-диаграммы планирования</h3>
+            <div class="diagrams">
+                <img src="img/Временная_диаграмма_Замула.png" alt="Временная диаграмма">
+                <p><em>Временная диаграмма этапов разработки</em></p>
+                
+                <img src="img/Диаграмма_USE_Case_Замула.png" alt="Use Case диаграмма">
+                <p><em>Диаграмма вариантов использования (Use Case)</em></p>
+                
+                <img src="img/Диаграмма_деятельности_Замула.png" alt="Диаграмма деятельности">
+                <p><em>Диаграмма деятельности (Activity Diagram)</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Разработка -->
+    <section>
+        <h2>3. Разработка</h2>
+        <div class="card">
+            <h3>Используемые технологии</h3>
+            <ul>
+                <li><strong>Backend:</strong> Django (Python) / Node.js (JavaScript)</li>
+                <li><strong>Frontend (Web):</strong> HTML5, CSS3, JavaScript, React</li>
+                <li><strong>Мобильные приложения:</strong> Kotlin (Android), Swift (iOS)</li>
+                <li><strong>Базы данных:</strong> PostgreSQL (основная), Redis (кеш)</li>
+                <li><strong>API интеграции:</strong> Платёжные системы (Tinkoff, Sberbank), биржевые данные, партнёры</li>
+                <li><strong>Хостинг:</strong> Облачная инфраструктура (Yandex.Cloud / AWS)</li>
+            </ul>
+
+            <h3>Архитектура системы</h3>
+            <div class="diagrams">
+                <img src="img/Диаграмма_композитной_структуры_Замула.png" alt="Диаграмма композитной структуры">
+                <p><em>Диаграмма композитной структуры</em></p>
+                
+                <img src="img/Диаграмма_компонентов_Замула.png" alt="Диаграмма компонентов">
+                <p><em>Диаграмма компонентов (Component Diagram)</em></p>
+                
+                <img src="img/Диаграмма_пакетов_Замула.png" alt="Диаграмма пакетов">
+                <p><em>Диаграмма пакетов (Package Diagram)</em></p>
+            </div>
+
+            <h3>Тестирование в процессе разработки</h3>
+            <ul>
+                <li><strong>Статическое тестирование (SAST):</strong> анализ кода на уязвимости</li>
+                <li><strong>Динамическое тестирование (DAST):</strong> проверка работы системы в runtime</li>
+                <li><strong>Код-ревью:</strong> проверка кода командой разработчиков</li>
+                <li><strong>Интеграционное тестирование:</strong> проверка взаимодействия модулей</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 4. Тестирование -->
+    <section>
+        <h2>4. Тестирование</h2>
+        <div class="card">
+            <h3>Виды тестирования</h3>
+            <ul>
+                <li><strong>Функциональное:</strong> проверка всех функций системы</li>
+                <li><strong>Нагрузочное:</strong> тестирование под высокой нагрузкой</li>
+                <li><strong>Интеграционное:</strong> тестирование API и внешних интеграций</li>
+                <li><strong>Юзабилити-тестирование:</strong> удобство интерфейса для пользователей</li>
+                <li><strong>Безопасность:</strong> пентесты, проверка на уязвимости</li>
+            </ul>
+
+            <h3>Видео-демонстрация тестирования</h3>
+            <video controls width="100%">
+                <source src="video/testing_demo.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <p><em>Демонстрация процесса тестирования интерфейса и API</em></p>
+
+            <h3>UML-диаграммы тестирования</h3>
+            <div class="diagrams">
+                <img src="img/Диаграмма_последовательностей_Замула.png" alt="Диаграмма последовательностей">
+                <p><em>Диаграмма последовательностей (Sequence Diagram)</em></p>
+                
+                <img src="img/Диаграмма_состояний_Замула.png" alt="Диаграмма состояний">
+                <p><em>Диаграмма состояний (State Diagram)</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Реализация -->
+    <section>
+        <h2>5. Реализация и результаты</h2>
+        <div class="card">
+            <h3>Планируемое vs Реализованное</h3>
+            <table>
+                <tr><th>Этап</th><th>План</th><th>Факт</th></tr>
+                <tr><td>Анализ рынка</td><td>Сентябрь 2025</td><td>Выполнено</td></tr>
+                <tr><td>Прототип</td><td>Октябрь 2025</td><td>Выполнено</td></tr>
+                <tr><td>Кэшбэк-система</td><td>Ноябрь 2025</td><td>В разработке</td></tr>
+                <tr><td>Бета-тестирование</td><td>Декабрь 2025</td><td>Запланировано</td></tr>
+                <tr><td>Релиз</td><td>Январь 2026</td><td>Запланировано</td></tr>
+            </table>
+
+            <h3>Ключевая статистика</h3>
+            <div class="stat-grid">
+                <div class="stat"><strong>99%</strong><div>Доступность системы</div></div>
+                <div class="stat"><strong>18-45 лет</strong><div>Целевая аудитория</div></div>
+                <div class="stat"><strong>5+</strong><div>Интеграций с банками</div></div>
+                <div class="stat"><strong>3</strong><div>Готовых портфеля</div></div>
+                <div class="stat"><strong>200+</strong><div>Партнёров по кэшбэку</div></div>
+                <div class="stat"><strong>0</strong><div>Критических уязвимостей</div></div>
+            </div>
+
+            <h3>Архитектурные диаграммы</h3>
+            <div class="diagrams">
+                <img src="img/Диаграмма_развертывания_Замула.png" alt="Диаграмма развертывания">
+                <p><em>Диаграмма развертывания (Deployment Diagram)</em></p>
+                
+                <img src="img/Диаграмма_коммуникаций_Замула.png" alt="Диаграмма коммуникаций">
+                <p><em>Диаграмма коммуникаций (Communication Diagram)</em></p>
+                
+                <img src="img/Диаграмма_объектов_Замула.png" alt="Диаграмма объектов">
+                <p><em>Диаграмма объектов (Object Diagram)</em></p>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer>
-  <div class="container">
-    <div>© 2025 Копилка</div>
-    <div><a href="privacy.html" style="color:#fff">Политика конфиденциальности</a> · <a href="contacts.html" style="color:#fff">Контакты</a></div>
-  </div>
+    <div class="container">
+        <div>© 2025 Копилка</div>
+        <div>
+            <a href="privacy.html" style="color:#fff">Политика конфиденциальности</a> · 
+            <a href="contacts.html" style="color:#fff">Контакты</a>
+        </div>
+    </div>
 </footer>
 </body>
 </html>
