@@ -1858,3 +1858,124 @@ input,button[type="submit"]{padding:10px;border-radius:6px;border:1px solid #ddd
 
 /* Utility */
 .hidden{display:none !important}
+
+/* Стили для раздела целевой аудитории */
+.target-audience-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 5px solid #4a90e2;
+}
+
+.audience-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.audience-segments {
+  margin: 1.5rem 0;
+}
+
+.segments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.segment-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s;
+}
+
+.segment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.segment-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #666;
+  padding-top: 0.8rem;
+  border-top: 1px dashed #ddd;
+}
+
+.audience-characteristics {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.audience-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.diagram-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.diagram-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.diagram-caption {
+  margin-top: 0.8rem;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.audience-insights {
+  margin-top: 1rem;
+}
+
+.insight-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.insight-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #4a90e2;
+  font-size: 0.9rem;
+}
+
+.insight-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .audience-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .segments-grid,
+  .insight-cards {
+    grid-template-columns: 1fr;
+  }
+}
